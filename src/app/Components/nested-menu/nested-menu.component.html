@@ -1,0 +1,66 @@
+<button mat-button [matMenuTriggerFor]="servicios">Servicios</button>
+<button mat-button [matMenuTriggerFor]="usuario" style="float:right">Nombre Usuario</button>
+
+
+<mat-menu #servicios="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="cartas">Cartas</button>
+  <button mat-menu-item [matMenuTriggerFor]="record_de_notas">Record de notas</button>
+  <button mat-menu-item [matMenuTriggerFor]="certificados">Certificaciones</button>
+
+</mat-menu>
+
+<mat-menu #cartas="matMenu">
+  <button mat-menu-item>Ultima materia</button>
+  <button mat-menu-item>Anillo de graduado</button>
+  <button mat-menu-item>Exequatur o grado</button>
+  <button mat-menu-item>Finalizacion sin tesis</button>
+  <button mat-menu-item>Finalzacion con tesis</button>
+</mat-menu>
+
+<mat-menu #record_de_notas="matMenu">
+  <button mat-menu-item>Record de notas oficial</button>
+  <button mat-menu-item>Record de notas oficio mescyt</button>
+</mat-menu>
+
+<mat-menu #certificados="matMenu">
+  <button mat-menu-item>Certificado de titulo</button>
+</mat-menu>
+
+<mat-menu #usuario="matMenu">
+    <button mat-menu-item>Cerrar sesion</button>
+</mat-menu>
+
+<!-- <mat-menu #invertebrates="matMenu">
+  <button mat-menu-item>Insects</button>
+  <button mat-menu-item>Molluscs</button>
+  <button mat-menu-item>Crustaceans</button>
+  <button mat-menu-item>Corals</button>
+  <button mat-menu-item>Arachnids</button>
+  <button mat-menu-item>Velvet worms</button>
+  <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu>
+
+<mat-menu #fish="matMenu">
+  <button mat-menu-item>Baikal oilfish</button>
+  <button mat-menu-item>Bala shark</button>
+  <button mat-menu-item>Ballan wrasse</button>
+  <button mat-menu-item>Bamboo shark</button>
+  <button mat-menu-item>Banded killifish</button>
+</mat-menu>
+
+<mat-menu #amphibians="matMenu">
+  <button mat-menu-item>Sonoran desert toad</button>
+  <button mat-menu-item>Western toad</button>
+  <button mat-menu-item>Arroyo toad</button>
+  <button mat-menu-item>Yosemite toad</button>
+</mat-menu>
+
+<mat-menu #reptiles="matMenu">
+  <button mat-menu-item>Banded Day Gecko</button>
+  <button mat-menu-item>Banded Gila Monster</button>
+  <button mat-menu-item>Black Tree Monitor</button>
+  <button mat-menu-item>Blue Spiny Lizard</button>
+  <button mat-menu-item disabled>Velociraptor</button>
+</mat-menu> -->
+
+
