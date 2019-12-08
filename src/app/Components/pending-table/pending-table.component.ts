@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-// misma tabla sera para los pending y para el history
-
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -23,15 +21,16 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne', symbol1: 'Ne', symbol2: 'Ne' }
 ];
 
-@Component({
-  selector: 'app-history-table',
-  templateUrl: './history-table.component.html',
-  styleUrls: ['./history-table.component.css']
-})
-export class HistoryTableComponent implements OnInit {
 
+@Component({
+  selector: 'app-pending-table',
+  templateUrl: './pending-table.component.html',
+  styleUrls: ['./pending-table.component.css']
+})
+export class PendingTableComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'symbol1', 'symbol2'];
   dataSource = ELEMENT_DATA;
+
   constructor() { }
 
   ngOnInit() {

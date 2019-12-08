@@ -1,5 +1,13 @@
-<button mat-button [matMenuTriggerFor]="servicios">Servicios</button>
-<button mat-button [matMenuTriggerFor]="usuario" style="float:right">Nombre Usuario</button>
+<div class="container">
+    <button mat-button [matMenuTriggerFor]="servicios" class="margin-left">Servicios</button>
+    <button mat-button [matMenuTriggerFor]="servicios" class="margin-left">Calendario</button>
+    <button mat-button [matMenuTriggerFor]="servicios" class="margin-left">Detalle de las gestiones</button>
+    <button mat-button [matMenuTriggerFor]="servicios" class="margin-left">Carrera</button>
+    <button mat-button [matMenuTriggerFor]="servicios" class="margin-left">Configuracion</button>
+    <button mat-button [matMenuTriggerFor]="servicios" class="margin-left">Ayuda</button>
+    <button mat-button [matMenuTriggerFor]="usuario" class="margin-left">Nombre Usuario</button>
+</div>
+
 
 
 <mat-menu #servicios="matMenu">
@@ -27,7 +35,7 @@
 </mat-menu>
 
 <mat-menu #usuario="matMenu">
-    <button mat-menu-item>Cerrar sesion</button>
+    <button mat-menu-item [routerLink]="['/login']">Cerrar sesion</button>
 </mat-menu>
 
 <!-- <mat-menu #invertebrates="matMenu">
