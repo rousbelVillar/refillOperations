@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { NestedMenuComponent } from './Components/nested-menu/nested-menu.component';
 import { HistoryTableComponent } from './Components/history-table/history-table.component';
 import { PendingTableComponent } from './Components/pending-table/pending-table.component';
+import { ServicesService } from './Services/services-call/services.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,9 +29,9 @@ import { PendingTableComponent } from './Components/pending-table/pending-table.
     BrowserModule, 
     BrowserAnimationsModule, 
     ReactiveFormsModule, 
-    MaterialModule, AppRoutingModule
+    MaterialModule, AppRoutingModule, HttpClientModule
      ],
-  providers: [],
+  providers: [ServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

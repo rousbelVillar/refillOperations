@@ -11,27 +11,21 @@
 
 
 <mat-menu #servicios="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="cartas">Cartas</button>
-  <button mat-menu-item [matMenuTriggerFor]="record_de_notas">Record de notas</button>
-  <button mat-menu-item [matMenuTriggerFor]="certificados">Certificaciones</button>
+  
+  <button mat-menu-item [matMenuTriggerFor]="cartas" *ngFor="let service of services"> {{service.nombre}}</button>  
 
 </mat-menu>
 
 <mat-menu #cartas="matMenu">
-  <button mat-menu-item>Ultima materia</button>
-  <button mat-menu-item>Anillo de graduado</button>
-  <button mat-menu-item>Exequatur o grado</button>
-  <button mat-menu-item>Finalizacion sin tesis</button>
-  <button mat-menu-item>Finalzacion con tesis</button>
+  <button mat-menu-item *ngFor="let service1 of services1"> {{service1.nombre}}</button>
 </mat-menu>
 
 <mat-menu #record_de_notas="matMenu">
-  <button mat-menu-item>Record de notas oficial</button>
-  <button mat-menu-item>Record de notas oficio mescyt</button>
+  <button mat-menu-item *ngFor="let service2 of services2"> {{service2.nombre}}</button>
 </mat-menu>
 
 <mat-menu #certificados="matMenu">
-  <button mat-menu-item>Certificado de titulo</button>
+  <button mat-menu-item *ngFor="let service3 of services3"> {{service3.nombre}}</button>
 </mat-menu>
 
 <mat-menu #usuario="matMenu">
