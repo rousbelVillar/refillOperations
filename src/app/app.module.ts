@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { NestedMenuComponent } from './Components/nested-menu/nested-menu.component';
 import { HistoryTableComponent } from './Components/history-table/history-table.component';
+import { PendingTableComponent } from './Components/pending-table/pending-table.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HistoryTableComponent } from './Components/history-table/history-table.
     LoginComponent,
     HomeComponent,
     NestedMenuComponent,
-    HistoryTableComponent
+    HistoryTableComponent,
+    PendingTableComponent
   ],
   imports: [
     BrowserModule, 

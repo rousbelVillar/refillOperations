@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class="container">
+    <img src="../../../assets/img/logo_uasd2.PNG" alt="">
+    <br>
+
+    <div align="center" style=" margin: 150px;">
+        <app-nested-menu></app-nested-menu>
+        <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="En Curso">
+                <app-pending-table></app-pending-table>
+            </mat-tab>
+            <mat-tab label="Historico/Finalizadas">
+                <app-history-table></app-history-table>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
