@@ -29,14 +29,16 @@ export class LoginComponent implements OnInit {
     switch (el) {
       case 'user':
         if (this.formGroup.get('username').hasError('required')) {
-          return 'Username required';
+          return 'Nombre de Usuario es requerido';
         }
         break;
+      
       case 'pass':
         if (this.formGroup.get('password').hasError('required')) {
-          return 'Password required';
+          return 'Contraseña es requerida.';
         }
         break;
+      
       default:
         return '';
     }
