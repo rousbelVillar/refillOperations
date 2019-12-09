@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NestedMenuComponent } from './Components/nested-menu/nested-menu.component';
 import { HistoryTableComponent } from './Components/history-table/history-table.component';
 import { PendingTableComponent } from './Components/pending-table/pending-table.component';
+import { RegistrationComponent } from './Views/registration/registration.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PendingTableComponent } from './Components/pending-table/pending-table.
     HomeComponent,
     NestedMenuComponent,
     HistoryTableComponent,
-    PendingTableComponent
+    PendingTableComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule, 
