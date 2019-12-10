@@ -1,83 +1,79 @@
+<div align=center class="container">
+    <img src="../../../assets/img/logo-uasd.jpg" alt="">
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
-  <div class="registration-container">
-  
     <mat-form-field >
-      <input matInput #names placeholder="Nombres" formControlName="names" required>
-      <mat-error *ngIf="formGroup.controls['names'].invalid">
-        {{getError('names')}}
-      </mat-error>
-    </mat-form-field>
+        <input matInput #names placeholder="Nombres" floatLabel="never" class="form-element" formControlName="names" required>
+        <mat-error *ngIf="formGroup.controls['names'].invalid">
+          {{getError('names')}}
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput #last_names placeholder="Apellidos" floatLabel="never" class="form-element" formControlName="last_names" required>
+        <mat-error *ngIf="formGroup.controls['last_names'].invalid">
+          {{getError('last_names')}}
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input  matInput #cedula minlength="11" maxlength="11" placeholder="Cedula" floatLabel="never" class="form-element" formControlName="cedula" required (keypress)="keyPress($event)">
+  
+        <mat-error *ngIf="formGroup.controls['cedula'].invalid">
+            {{getError('cedula')}}
+        </mat-error>
+  
+        <mat-error>
+            La cedula debe ser de 11 caracteres
+        </mat-error>
+  
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput #user placeholder="Usuario" floatLabel="never" class="form-element" formControlName="user" required>
+        <mat-error *ngIf="formGroup.controls['user'].invalid">
+          {{getError('user')}}
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput #input type=email placeholder="Correo" floatLabel="never" class="form-element" formControlName="mail" required>
+        <mat-error *ngIf="formGroup.controls['mail'].invalid">
+          {{getError('mail')}}
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput #input maxlength="10" placeholder="Matricula" floatLabel="never" class="form-element" formControlName="enrollment" required>
+        <mat-error *ngIf="formGroup.controls['enrollment'].invalid">
+          {{getError('enrollment')}}
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput #password type="password" placeholder="Contraseña" floatLabel="never" class="form-element" formControlName="password" required>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput #password_confirm type="password" placeholder="Repita La contraseña" floatLabel="never" class="form-element" formControlName="password_confirm" required>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-select placeholder="Rol" required>
+          <mat-option value="option">Profesor</mat-option>
+          <mat-option value="option">Estudiante</mat-option>
+        </mat-select>
+      </mat-form-field>
 
-    <mat-form-field>
-      <input matInput #last_names placeholder="Apellidos" formControlName="last_names" required>
-      <mat-error *ngIf="formGroup.controls['last_names'].invalid">
-        {{getError('last_names')}}
-      </mat-error>
-    </mat-form-field>
-
-    <mat-form-field>
-      <input  matInput #cedula minlength="11" maxlength="11" placeholder="Cedula" formControlName="cedula" required (keypress)="keyPress($event)">
-
-      <mat-error *ngIf="formGroup.controls['cedula'].invalid">
-          {{getError('cedula')}}
-      </mat-error>
-
-      <mat-error>
-          La cedula debe ser de 11 caracteres
-      </mat-error>
-
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput #user placeholder="Usuario" formControlName="user" required>
-      <mat-error *ngIf="formGroup.controls['user'].invalid">
-        {{getError('user')}}
-      </mat-error>
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput #input type=email placeholder="Correo" formControlName="mail" required>
-      <mat-error *ngIf="formGroup.controls['mail'].invalid">
-        {{getError('mail')}}
-      </mat-error>
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput #input maxlength="10" placeholder="Matricula" formControlName="enrollment" required>
-      <mat-error *ngIf="formGroup.controls['enrollment'].invalid">
-        {{getError('enrollment')}}
-      </mat-error>
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput #password type="password" placeholder="Contraseña" formControlName="password" required>
-      <mat-error *ngIf="formGroup.controls['password'].invalid">
-        {{getError('password')}}
-      </mat-error>
-    </mat-form-field>
-
-    <mat-form-field>
-      <input matInput type="password" placeholder="Repita La contraseña" formControlName="password_confirm" [errorStateMatcher]="matcher" required>
-
-      <mat-error *ngIf="formGroup.hasError('notSame');">
-          La contraseña no coincide con la antes ingresada.
-      </mat-error>
-
-
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-select placeholder="Rol" required>
-        <mat-option value="option">Profesor</mat-option>
-        <mat-option value="option">Estudiante</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
+      <div class="form-element">
+          <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid"
+            [routerLink]="['/home']">Registrarse</button>
+        </div> 
+        <div class="form-element">
+          <button mat-raised-button color="primary" type="submit" class="button" 
+            [routerLink]="['/login']">Cancelar</button>
+        </div> 
 </form>
 
-<div>
-  <div class="form-element">
-    <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid"
-      [routerLink]="['/home']">Registrarse</button>
-  </div>  
 </div>
+
+ 

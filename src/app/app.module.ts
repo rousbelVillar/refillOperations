@@ -12,12 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { NestedMenuComponent } from './Components/nested-menu/nested-menu.component';
 import { HistoryTableComponent } from './Components/history-table/history-table.component';
 import { PendingTableComponent } from './Components/pending-table/pending-table.component';
-<<<<<<< HEAD
 import { ServicesService } from './Services/services-call/services.service';
 import { HttpClientModule } from '@angular/common/http';
-=======
 import { RegistrationComponent } from './Views/registration/registration.component';
->>>>>>> a557cbae55e18bc609c81adc2ef95e5176dbcf74
 
 
 @NgModule({

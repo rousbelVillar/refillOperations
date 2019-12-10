@@ -128,6 +128,10 @@ export class RegistrationComponent implements OnInit {
 
   }
 
+  onSubmit(){
+    
+  }
+
 
 
 
