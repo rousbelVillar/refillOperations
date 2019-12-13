@@ -15,6 +15,7 @@ import { PendingTableComponent } from './Components/pending-table/pending-table.
 import { ServicesService } from './Services/services-call/services.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrationComponent } from './Views/registration/registration.component';
+import { SolicitudesFormComponent } from './Components/solicitudes-form/solicitudes-form.component';
 
 
 @NgModule({
@@ -25,15 +26,19 @@ import { RegistrationComponent } from './Views/registration/registration.compone
     NestedMenuComponent,
     HistoryTableComponent,
     PendingTableComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    SolicitudesFormComponent
+
   ],
+
   imports: [
-    BrowserModule, 
-    BrowserAnimationsModule, 
-    ReactiveFormsModule, 
+    BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
     MaterialModule, AppRoutingModule, HttpClientModule
      ],
   providers: [ServicesService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SolicitudesFormComponent],
 })
 export class AppModule { }

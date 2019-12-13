@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../../Services/services-call/services.service';
+import { SolicitudesFormComponent } from '../solicitudes-form/solicitudes-form.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-nested-menu',
@@ -13,34 +15,16 @@ export class NestedMenuComponent implements OnInit {
   services3: any;
   public dataLength: number;
 
-  constructor(private servicesService: ServicesService ) { }
+  constructor(private servicesService: ServicesService, private dialog: MatDialog ) { }
 
   ngOnInit() {
 
-    this.servicesService.getServicesParent()
-    .subscribe(data => {
-      this.dataLength = data.length;
-      this.services = data;
-    });
-
-    this.servicesService.getServices1()
-    .subscribe(data => {
-      this.dataLength = data.length;
-      this.services1 = data;
-    });
-
-    this.servicesService.getServices2()
-    .subscribe(data => {
-      this.dataLength = data.length;
-      this.services2 = data;
-      console.log(this.services2);
-    });
-
-    this.servicesService.getServices3()
-    .subscribe(data => {
-      this.dataLength = data.length;
-      this.services3 = data;
-    });
+  }
+  openNewRequest(): void {
+    this.dialog.open(
+      SolicitudesFormComponent, {
+        width: '640px', disableClose: true
+      });
   }
 
 }
